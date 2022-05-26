@@ -1,0 +1,74 @@
+"""
+Random points for testing the LWP in the different maps.
+
+The workflow is first publishing each of this points as inital positions
+and then publishing different goals using the 2D Nav Goal button of RVIZ.
+The checking is done observing the route calculated in RVIZ.
+"""
+
+rostopic pub -r 10 /t4ac/localization/pose nav_msgs/Odometry "header:
+  seq: 0
+  stamp:
+    secs: 0
+    nsecs: 0
+  frame_id: ''
+child_frame_id: ''
+pose:
+  pose:
+    position: {x: 5.92, y: -155.77, z: 0.0}
+    orientation: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+  covariance: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+    0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+    0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+twist:
+  twist:
+    linear: {x: 0.0, y: 0.0, z: 0.0}
+    angular: {x: 0.0, y: 0.0, z: 0.0}
+  covariance: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+    0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]" 
+
+
+# Debug Positions for Town01
+x: 15.71, y: -1.11, z: 0.0
+x: 245.55, y: -59.30, z: 0.0
+x: 339.38, y: -302.55, z: 0.0
+
+# Debug Position 1 for Town02
+x: 9.78, y: -104.92, z: 0.0
+x: 57.89, y: -191.85, z: 0.0
+x: 60.97, y: -302.75, z: 0.0
+
+# Debug Position 1 for Town03
+x: 229.12, y: -115.35, z: 0.0
+x: 150.30, y: 168.31, z: 0.0
+x: 5.44, y: -58.98, z: 0.0
+
+# Debug Position 1 for Town04
+x: 128.89, y: -38.41, z: 0.0
+x: 258.50, y: 197.48, z: 0.0
+x: 102.59, y: -236.23, z: 0.0
+
+# Debug Position 1 for Town05 --> Not checked for not having the correct map version
+x: , y: , z: 0.0
+x: , y: , z: 0.0
+x: , y: , z: 0.0
+
+# Debug Position 1 for Town06
+x: -9.90, y: -21.18, z: 0.0
+x: 153.03, y: -194.49, z: 0.0
+x: -359.18, y: -155.36, z: 0.0 --> Conflict for goal (-145.62, 7.13, 0.0)
+
+# Debug Position 1 for Town07
+x: -131.21, y: 163.41, z: 0.0  --> Conflict for goal (-148.69, 243.20, 0.0)
+x: , y: , z: 0.0
+x: , y: , z: 0.0
+
+# Debug Position 1 for Town10HD
+x: -25.79, y: -27.52, z: 0.0
+x: , y: , z: 0.0
+x: , y: , z: 0.0
+
+# Debug Position 1 for CampusUAH_v1_7
+x: 204.74, y: 103.39, z: 0.0
+x: , y: , z: 0.0
+x: , y: , z: 0.0

@@ -1,0 +1,15 @@
+<!-- Map Monitor (without PythonAPI) launch configuration -->
+<launch>
+    <!-- Arguments set by terminal -->
+    <arg name='map_name' default='Town03'/>
+
+    <!-- Parameters of the layer -->
+    <group ns="/t4ac/mapping">
+        <param name="map_path" type="string" value="/workspace/team_code/catkin_ws/src/t4ac_mapping_layer/maps/xodr/"/>
+        <param name="map_name" type="string" value="$(arg map_name)" />>
+    </group>
+
+    <!-- Nodes launched -->
+    <node name="map_monitor_node" pkg="t4ac_map_monitor_ros" type="map_monitor.py" output="screen"/>
+    <node name="monitor_visualizator_node" pkg="t4ac_map_monitor_ros" type="monitor_visualizator.py" output="screen"/>
+</launch>

@@ -1,0 +1,22 @@
+<!-- Global Planner launch configuration -->
+<launch>
+    <!-- Arguments set by terminal -->
+    <arg name='map_name' default='Town03'/>
+    <arg name='distance_between_waypoints' default='3'/>
+    <arg name='visualization' default='false'/>
+
+    <!-- Parameters of the layer -->
+    <group ns="/t4ac/mapping">
+        <param name="map_path" type="string" value="/workspace/team_code/catkin_ws/src/t4ac_mapping_layer/maps/xodr/"/>
+        <param name="map_name" type="string" value="$(arg map_name)" />
+        <param name="distance_between_waypoints" type="double" value="$(arg distance_between_waypoints)" />
+    </group>
+
+    <!-- Nodes launched -->
+    <node name="global_planner_node" pkg="t4ac_global_planner_ros" type="lane_waypoint_planner.py"/>
+
+    <group if="$(eval visualization == true)">
+        <node name="route_visualizator_node" pkg="t4ac_global_planner_ros" type="route_visualizator.py"/>
+    </group>
+</launch>
+
