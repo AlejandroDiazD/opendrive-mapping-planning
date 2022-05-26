@@ -119,6 +119,8 @@ The monitors are calculated in a callback that is updated every time the odometr
 Maps are in the /maps directory, separated by format. The maps used in this project are in OpenDRIVE format (xodr files). Inside the /xodr directory, some of the maps are classfied by their CARLA version. 
 
 ## Results
+https://user-images.githubusercontent.com/61188820/168630376-acda7c02-b184-4e31-8011-14d543cb4927.mp4
+
 Refer to bibliography.
 
 ## Future Works
